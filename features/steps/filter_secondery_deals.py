@@ -13,8 +13,17 @@ def open_main_page(context):
 
 @when('Log in to the page')
 def login(context):
-   context.driver.find_element(By.XPATH, "// div[ @class ='g-menu-logo-name']")
+    WebDriverWait(context.driver, 10).until(
+        EC.visibility_of_element_located((By.CSS_SELECTOR,  "#email-2")))
 
+    # Fill in the username and password
+    context.driver.find_element(By.CSS_SELECTOR,  "#email-2").send_keys("Test@gmail.com")
+    context.driver.find_element(By.CSS_SELECTOR, "#field").send_keys("********")
+
+    # Click the login button
+    context.driver.find_element(By.CSS_SELECTOR, ".login-button.w-button").click()
+
+   # context.driver.find_element(By.XPATH, "// div[ @class ='g-menu-logo-name']")
 
 @when('Click on the “Secondary” option on the left side menu')
 def secondary_option_on_left_side_menu(context):
