@@ -7,7 +7,7 @@ SEARCH_INPUT = (By.NAME, 'q')
 SEARCH_SUBMIT = (By.NAME, 'btnK')
 
 
-@given('Open Google page')
+@given('Open Google pages')
 def open_google(context):
     context.driver.get('https://www.google.com/')
 
