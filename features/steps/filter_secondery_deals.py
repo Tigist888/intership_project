@@ -27,11 +27,11 @@ def login(context):
 
 @when('Click on the “Secondary” option on the left side menu')
 def secondary_option_on_left_side_menu(context):
-   context.app.main_page.click_secondary_side()
+   context.app.secondary_page.click_secondary_button()
 
 @then('Verify that the right page opened')
 def verify_right_page_opens(context):
-   context.app.secondary_page.verify_right_page_opened()
+    context.app.secondary_page.verify_secondary_page_opened()
 
 @when('Click on Filters')
 def click_filters(context):
