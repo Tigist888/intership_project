@@ -8,6 +8,6 @@ Feature:  Filter Secondary deals
     And Click on the “Secondary” option on the left side menu
     Then Verify that the right page opened
     When Click on Filters
-    And Filter the products by “want to buy
+    And Filter the products by “want to buy"
     And Click on Apply Filter
     Then Verify all cards have a “Want to buy” tag

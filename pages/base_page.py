@@ -12,8 +12,8 @@ class Page(object):
         return self.driver.find_elements(*locator)
 
     def click(self,*locator):
-        return self.driver.find_element(*locator).click()
+        self.driver.find_element(*locator).click()
 
     def input_text(self,text,*locator):
-       return self.driver.find_element(*locator).send_keys(text)
+       self.driver.find_element(*locator).send_keys(text)
 

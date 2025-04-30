@@ -5,6 +5,7 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
+from app.appilication import Application
 
 
 
@@ -35,6 +36,7 @@ def browser_init(context):
         print("Using Firefox browser in NON-HEADLESS mode.")  # Print message for Firefox
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
+    context.app=Application(context.driver)
 
 
 #
